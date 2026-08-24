@@ -3,94 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GHOST_0x — Portfolio</title>
+<title>GHOST_0x — Interactive</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap');
-  *{ margin:0; padding:0; box-sizing:border-box; }
-  body{
-    background:#f5f5f5;
-    color:#111;
-    font-family:'Inter', sans-serif;
-    padding:40px 20px;
-  }
-  .container{ max-width:600px; margin:auto; }
-  .header{
-    border-bottom:2px solid #111;
-    padding-bottom:30px;
-    margin-bottom:30px;
-  }
-  h1{ font-size:52px; font-weight:900; letter-spacing:-3px; line-height:0.9; }
-  .tag{ font-size:12px; letter-spacing:4px; text-transform:uppercase; margin-top:10px; opacity:0.6; }
-  .section{ margin-bottom:40px; }
-  .label{ font-size:11px; letter-spacing:3px; text-transform:uppercase; opacity:0.5; margin-bottom:15px; display:block; }
-  .card{
-    background:#fff;
-    border:1px solid #111;
-    padding:20px;
-    margin-bottom:12px;
-  }
-  .skill-row{
-    display:flex;
-    justify-content:space-between;
-    border-bottom:1px solid #eee;
-    padding:12px 0;
-    font-size:14px;
-  }
-  .skill-row:last-child{ border:none; }
-  .pct{ font-weight:600; }
-  .project-title{ font-weight:600; font-size:18px; margin-bottom:8px; }
-  .project-desc{ font-size:14px; line-height:1.5; opacity:0.7; }
-  .btn{
-    display:block;
-    background:#111;
-    color:#fff;
-    text-align:center;
-    padding:18px;
-    text-decoration:none;
-    font-weight:600;
-    letter-spacing:1px;
-    margin-top:20px;
-    transition:0.2s;
-  }
-  .btn:hover{ background:#333; }
-  .footer{ font-size:11px; opacity:0.4; margin-top:50px; text-align:center; letter-spacing:1px; }
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0a0a0a;color:#fff;font-family:'Space Grotesk',sans-serif;padding:30px 20px}
+  .container{max-width:600px;margin:auto}
+  h1{font-size:60px;font-weight:700;letter-spacing:-4px;line-height:0.9}
+  h1 span{color:#555}
+  .tag{color:#888;letter-spacing:3px;font-size:11px;margin:15px 0 35px;text-transform:uppercase}
+  .card{background:#141414;border:1px solid #222;padding:20px;margin-bottom:10px;cursor:pointer;transition:0.3s}
+  .card:hover{border-color:#444}
+  .skill-head{display:flex;justify-content:space-between;align-items:center}
+  .skill-name{font-weight:500}
+  .skill-pct{color:#888;font-size:13px}
+  .skill-detail{max-height:0;overflow:hidden;transition:0.4s ease;opacity:0}
+  .card.active .skill-detail{max-height:200px;opacity:1;margin-top:15px}
+  .card.active{border-color:#fff;background:#1a1a1a}
+  .detail-text{font-size:13px;color:#999;line-height:1.6;border-top:1px solid #222;padding-top:12px}
+  .project{background:#fff;color:#000;padding:25px;margin:35px 0}
+  .project h3{font-size:20px;margin-bottom:10px}
+  .project p{font-size:14px;line-height:1.5;opacity:0.7}
+  .btn{display:block;background:#fff;color:#000;text-align:center;padding:18px;text-decoration:none;font-weight:700;letter-spacing:1px}
+  .btn:hover{background:#ddd}
+  .footer{text-align:center;color:#333;font-size:10px;margin-top:40px;letter-spacing:2px}
 </style>
 </head>
 <body>
 <div class="container">
-  <div class="header">
-    <h1>GHOST<br>0x</h1>
-    <div class="tag">Estudiante // Tecpatán, Chiapas</div>
+  <h1>GHOST<br><span>0x</span></h1>
+  <div class="tag">Tecpatán, Chiapas — Interactive v5</div>
+
+  <div class="card" onclick="this.classList.toggle('active')">
+    <div class="skill-head"><span class="skill-name">Linux / Termux</span><span class="skill-pct">40% — TOCA PARA VER</span></div>
+    <div class="skill-detail"><div class="detail-text">Manejo de comandos básicos, navegación, nano, git, creación de servidor local. Todo desde el celular. Próximo: bash scripting.</div></div>
   </div>
 
-  <div class="section">
-    <span class="label">01 / Sobre mi</span>
-    <div class="card">
-      Estudiante en aprendizaje constante. Interesado en Linux, desarrollo web y ciberseguridad desde Termux. En modo aprendizaje pero con mentalidad ROOT.
-    </div>
+  <div class="card" onclick="this.classList.toggle('active')">
+    <div class="skill-head"><span class="skill-name">HTML / CSS</span><span class="skill-pct">50% — TOCA PARA VER</span></div>
+    <div class="skill-detail"><div class="detail-text">Maquetación, flexbox, animaciones, responsive design. Ya van 5 versiones de mi web sin usar frameworks.</div></div>
   </div>
 
-  <div class="section">
-    <span class="label">02 / Habilidades</span>
-    <div class="card" style="padding:0 20px;">
-      <div class="skill-row"><span>Linux / Termux</span><span class="pct">40%</span></div>
-      <div class="skill-row"><span>HTML / CSS</span><span class="pct">50%</span></div>
-      <div class="skill-row"><span>Ciberseguridad</span><span class="pct">20%</span></div>
-      <div class="skill-row"><span>Python</span><span class="pct">10%</span></div>
-    </div>
+  <div class="card" onclick="this.classList.toggle('active')">
+    <div class="skill-head"><span class="skill-name">Ciberseguridad</span><span class="skill-pct">20% — TOCA PARA VER</span></div>
+    <div class="skill-detail"><div class="detail-text">Fundamentos, anonimato, OSINT básico. Estudiando para entender cómo funciona todo por debajo.</div></div>
   </div>
 
-  <div class="section">
-    <span class="label">03 / Proyecto</span>
-    <div class="card">
-      <div class="project-title">GHOST-OS Web Interface</div>
-      <div class="project-desc">Interfaz web minimalista hecha 100% desde Termux en Android. Sin frameworks, solo HTML + CSS puro. v4 Minimal Pro.</div>
-    </div>
+  <div class="card" onclick="this.classList.toggle('active')">
+    <div class="skill-head"><span class="skill-name">Python</span><span class="skill-pct">10% — TOCA PARA VER</span></div>
+    <div class="skill-detail"><div class="detail-text">Recién empezando. Variables, loops y automatización de tareas en Termux.</div></div>
   </div>
 
-  <a class="btn" href="https://github.com/ghost-0x-coder" target="_blank">GITHUB.COM/GHOST-0X-CODER →</a>
+  <div class="project">
+    <h3>GHOST-OS Web Interface</h3>
+    <p>Portafolio interactivo hecho 100% desde Android. v5 con JavaScript real. Toca las habilidades para expandir.</p>
+  </div>
 
-  <div class="footer">© 2026 GHOST_0x — HECHO EN TECPATÁN</div>
+  <a class="btn" href="https://github.com/ghost-0x-coder" target="_blank">VER GITHUB →</a>
+
+  <div class="footer">© 2026 GHOST_0x — HECHO EN ANDROID</div>
 </div>
 </body>
 </html>
