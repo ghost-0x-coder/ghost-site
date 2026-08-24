@@ -1,44 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GHOST_0x</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GHOST_0x // ROOT</title>
 <style>
-body{background:black;color:#00ff41;font-family:monospace;padding:15px}
-h1{text-align:center;text-shadow:0 0 15px #00ff41;animation:glow 1s infinite alternate}
-@keyframes glow{from{text-shadow:0 0 10px #00ff41}to{text-shadow:0 0 25px #00ff41}}
-.box{border:2px solid #00ff41;box-shadow:0 0 10px #00ff41;padding:12px;margin:15px 0}
-.btn{display:block;border:1px solid #00ff41;color:#00ff41;text-align:center;padding:12px;margin-top:20px;text-decoration:none;box-shadow:0 0 10px #00ff41}
-.btn:hover{background:#00ff41;color:black}
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+  body{
+    background:#000;
+    color:#00ff41;
+    font-family:'Share Tech Mono', monospace;
+    margin:0;
+    padding:20px;
+    display:flex;
+    justify-content:center;
+  }
+  .container{ width:100%; max-width:480px; }
+  h1{
+    text-align:center;
+    font-size:38px;
+    text-shadow:0 0 10px #00ff41, 0 0 20px #00ff41;
+    margin-bottom:5px;
+    animation: glitch 2s infinite;
+  }
+  .subtitle{
+    text-align:center;
+    letter-spacing:2px;
+    margin-bottom:20px;
+    opacity:0.8;
+  }
+  .box{
+    border:2px solid #00ff41;
+    box-shadow:0 0 10px #00ff41 inset, 0 0 10px #00ff41;
+    padding:15px;
+    margin-bottom:20px;
+    background:rgba(0,255,65,0.05);
+  }
+  .skill{ margin:8px 0; }
+  .bar-bg{
+    display:inline-block;
+    width:160px;
+    height:14px;
+    border:1px solid #00ff41;
+    background:#111;
+    vertical-align:middle;
+    margin:0 5px;
+  }
+  .bar-fill{
+    height:100%;
+    background:#00ff41;
+    box-shadow:0 0 8px #00ff41;
+    width:0;
+    animation: load 2s forwards;
+  }
+  @keyframes load{ to{ width:var(--w); } }
+  @keyframes glitch{
+    0%{ transform:none; }
+    92%{ transform:none; }
+    93%{ transform:skewX(2deg); }
+    94%{ transform:skewX(-2deg); }
+    95%{ transform:none; }
+  }
+  .btn{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    color:#00ff41;
+    border:2px solid #00ff41;
+    padding:12px;
+    box-shadow:0 0 10px #00ff41;
+    animation: pulse 1.5s infinite alternate;
+    transition:0.2s;
+  }
+  .btn:hover{ background:#00ff41; color:#000; }
+  @keyframes pulse{
+    from{ box-shadow:0 0 10px #00ff41; }
+    to{ box-shadow:0 0 25px #00ff41, 0 0 40px #00ff41; }
+  }
+  .footer{ text-align:center; font-size:12px; margin-top:15px; opacity:0.6; }
+  .cursor{ animation: blink 1s infinite; }
+  @keyframes blink{ 50%{ opacity:0; } }
 </style>
 </head>
 <body>
-<h1>GHOST_0x</h1>
-<p style="text-align:center">[ ACCESO CONCEDIDO ]</p>
+<div class="container">
+  <h1>GHOST_0x</h1>
+  <div class="subtitle">[ ACCESO CONCEDIDO ]</div>
 
-<div class="box">
-> Usuario: GHOST_0x<br>
-> Estado: ESTUDIANTE // EN APRENDIZAJE<br>
-> Sistema: GHOST-OS v3.1<br>
-> Nivel: ROOT [TRAINING MODE]<br>
-> _ Sistema operativo...
+  <div class="box">
+    > Usuario: GHOST_0x<br>
+    > Estado: ESTUDIANTE // EN APRENDIZAJE<br>
+    > Sistema: GHOST-OS v3.1 ANIMATED<br>
+    > Nivel: ROOT [TRAINING MODE]<br>
+    > _ Sistema operativo<span class="cursor">█</span>
+  </div>
+
+  <div class="box">
+    > HABILIDADES_EN_PROGRESO<br><br>
+    <div class="skill">- Linux / Termux <span class="bar-bg"><span class="bar-fill" style="--w:40%"></span></span> 40%</div>
+    <div class="skill">- HTML / CSS <span class="bar-bg"><span class="bar-fill" style="--w:50%"></span></span> 50%</div>
+    <div class="skill">- Ciberseguridad <span class="bar-bg"><span class="bar-fill" style="--w:20%"></span></span> 20%</div>
+    <div class="skill">- Python <span class="bar-bg"><span class="bar-fill" style="--w:10%"></span></span> 10%</div>
+  </div>
+
+  <div class="box">
+    Nombre: GHOST-OS Web Interface<br>
+    Descripción: Interfaz web tipo terminal para practicar HTML y anonimato.<br>
+    Stack: HTML + CSS puro desde Termux<br>
+    Update: v3 con animaciones
+  </div>
+
+  <a class="btn" href="https://github.com/ghost-0x-coder" target="_blank">> CONTACTAR_A_GHOST // GITHUB</a>
+
+  <div class="footer">ROOT ACCESS // LEARNING MODE // 2026</div>
 </div>
-
-<div class="box">
-> HABILIDADES_EN_PROGRESO<br><br>
-- Linux / Termux [████░░░░] 40%<br>
-- HTML / CSS [█████░░░░░] 50%<br>
-- Ciberseguridad [██░░░░░░░░] 20%<br>
-- Python [█░░░░░░░░░] 10%
-</div>
-
-<div class="box">
-Nombre: GHOST-OS Web Interface<br>
-Descripción: Interfaz web tipo terminal para practicar HTML y anonimato.<br>
-Stack: HTML + CSS puro desde Termux
-</div>
-
-<a class="btn" href="https://github.com/ghost-0x-coder">> CONTACTAR_A_GHOST // GITHUB</a>
-<p style="text-align:center;font-size:10px;margin-top:30px">ROOT ACCESS // LEARNING MODE // 2026</p>
 </body>
 </html>
