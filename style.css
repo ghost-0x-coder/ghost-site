@@ -1,0 +1,12 @@
+body{background:#000;color:#00ff00;font-family:monospace;margin:0;padding:15px}
+.terminal{max-width:700px;margin:auto;border:1px solid #00ff00;padding:20px;box-shadow:0 0 20px #00ff00}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
+.card{border:1px solid #00ff00;padding:15px;cursor:pointer;transition:0.3s}
+.card:hover{background:#001100}
+.hidden{display:none;margin-top:10px}
+.card.active .hidden{display:block}
+.contact{border:1px dashed #00ff00;padding:15px;margin-top:20px}
+input,textarea{width:100%;background:#000;border:1px solid #00ff00;color:#00ff00;padding:10px;margin:5px 0;font-family:monospace}
+button{background:#00ff00;color:#000;border:none;padding:10px 20px;font-weight:bold;cursor:pointer;width:100%}
+button:hover{background:#fff}
+a{color:#00ff88}

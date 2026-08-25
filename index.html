@@ -1,67 +1,38 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GHOST_0x — Interactive</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{background:#0a0a0a;color:#fff;font-family:'Space Grotesk',sans-serif;padding:30px 20px}
-  .container{max-width:600px;margin:auto}
-  h1{font-size:60px;font-weight:700;letter-spacing:-4px;line-height:0.9}
-  h1 span{color:#555}
-  .tag{color:#888;letter-spacing:3px;font-size:11px;margin:15px 0 35px;text-transform:uppercase}
-  .card{background:#141414;border:1px solid #222;padding:20px;margin-bottom:10px;cursor:pointer;transition:0.3s}
-  .card:hover{border-color:#444}
-  .skill-head{display:flex;justify-content:space-between;align-items:center}
-  .skill-name{font-weight:500}
-  .skill-pct{color:#888;font-size:13px}
-  .skill-detail{max-height:0;overflow:hidden;transition:0.4s ease;opacity:0}
-  .card.active .skill-detail{max-height:200px;opacity:1;margin-top:15px}
-  .card.active{border-color:#fff;background:#1a1a1a}
-  .detail-text{font-size:13px;color:#999;line-height:1.6;border-top:1px solid #222;padding-top:12px}
-  .project{background:#fff;color:#000;padding:25px;margin:35px 0}
-  .project h3{font-size:20px;margin-bottom:10px}
-  .project p{font-size:14px;line-height:1.5;opacity:0.7}
-  .btn{display:block;background:#fff;color:#000;text-align:center;padding:18px;text-decoration:none;font-weight:700;letter-spacing:1px}
-  .btn:hover{background:#ddd}
-  .footer{text-align:center;color:#333;font-size:10px;margin-top:40px;letter-spacing:2px}
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GHOST-OS v6</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-  <h1>GHOST<br><span>0x</span></h1>
-  <div class="tag">Tecpatán, Chiapas — Interactive v5</div>
-
-  <div class="card" onclick="this.classList.toggle('active')">
-    <div class="skill-head"><span class="skill-name">Linux / Termux</span><span class="skill-pct">40% — TOCA PARA VER</span></div>
-    <div class="skill-detail"><div class="detail-text">Manejo de comandos básicos, navegación, nano, git, creación de servidor local. Todo desde el celular. Próximo: bash scripting.</div></div>
+<div class="terminal">
+  <h1 id="type"></h1>
+  <p>> Dev from Tecpatán, Chiapas [MX]</p>
+  <p>> Building GHOST-OS from Android</p>
+  
+  <div class="grid">
+    <div class="card" onclick="this.classList.toggle('active')">
+      <h3>👻 GHOST-OS v5</h3><p>Click para expandir</p>
+      <div class="hidden"><a href="https://ghost-0x-coder.github.io/ghost-site/" target="_blank">Ver Live</a> | <a href="https://github.com/ghost-0x-coder" target="_blank">GitHub</a></div>
+    </div>
+    <div class="card"><h3>🛠️ Stack</h3><p>HTML / CSS / JS / Termux</p></div>
+    <div class="card"><h3>📝 Blog</h3><p><a href="https://dev.to/ghost-0x-coder" target="_blank">Mi perfil en dev.to</a></p></div>
   </div>
 
-  <div class="card" onclick="this.classList.toggle('active')">
-    <div class="skill-head"><span class="skill-name">HTML / CSS</span><span class="skill-pct">50% — TOCA PARA VER</span></div>
-    <div class="skill-detail"><div class="detail-text">Maquetación, flexbox, animaciones, responsive design. Ya van 5 versiones de mi web sin usar frameworks.</div></div>
+  <div class="contact">
+    <h2>> contact_me.exe</h2>
+    <form action="mailto: jadervalen12@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Tu nombre" required>
+      <input type="text" name="project" placeholder="Tu idea / proyecto" required>
+      <textarea name="msg" placeholder="Cuéntame..."></textarea>
+      <button type="submit">ENVIAR TRANSMISIÓN</button>
+    </form>
+    <p style="font-size:12px; opacity:0.6">*Respondo en 24h. Todo por email, no WhatsApp personal.</p>
   </div>
 
-  <div class="card" onclick="this.classList.toggle('active')">
-    <div class="skill-head"><span class="skill-name">Ciberseguridad</span><span class="skill-pct">20% — TOCA PARA VER</span></div>
-    <div class="skill-detail"><div class="detail-text">Fundamentos, anonimato, OSINT básico. Estudiando para entender cómo funciona todo por debajo.</div></div>
-  </div>
-
-  <div class="card" onclick="this.classList.toggle('active')">
-    <div class="skill-head"><span class="skill-name">Python</span><span class="skill-pct">10% — TOCA PARA VER</span></div>
-    <div class="skill-detail"><div class="detail-text">Recién empezando. Variables, loops y automatización de tareas en Termux.</div></div>
-  </div>
-
-  <div class="project">
-    <h3>GHOST-OS Web Interface</h3>
-    <p>Portafolio interactivo hecho 100% desde Android. v5 con JavaScript real. Toca las habilidades para expandir.</p>
-  </div>
-
-  <a class="btn" href="https://github.com/ghost-0x-coder" target="_blank">VER GITHUB →</a>
-
-  <div class="footer">© 2026 GHOST_0x — HECHO EN ANDROID</div>
+  <footer>GHOST-0X-CODER © 2026 | Tecpatán, Chiapas</footer>
 </div>
+<script src="script.js"></script>
 </body>
 </html>
